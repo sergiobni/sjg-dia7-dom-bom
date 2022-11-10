@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="box" id="caja">
+        <h1>Ejemplo de uso DOM</h1>
+        <p id="1">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores culpa
+          corrupti harum quae distinctio aliquam id necessitatibus nihil
+          consequuntur quas.
+        </p>
+        <p id="2">
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nisi labore
+          iusto, temporibus corporis ullam ad!
+        </p>
+        <p id="a1">accion</p>
+        <p id="a2" hidden="true">no accion</p>
+        <script>
+          // document.write('<p>ejemplo</p>');
+          // document.getElementById(2).innerHTML = 'Ejemplo modificado';
+          // let nombre = prompt('Dime tu nombre');
+          // document.write(`<p>bienvenido ${nombre}`);
+          let text = document.createTextNode('Ejemplo párrafo container');
+          let nuevoParrafo = document.createElement('p').appendChild(text); //creando un párrafo, pero no tendrá nada hasta que añadamos un texto al elemento, para ello usamos appendchild
+          //Para que aparezca en la web debemos añadir el elemento a una etiqueta existente
+          document.getElementById('caja').appendChild(nuevoParrafo);
+        </script>
+      </div>
+    </div>
+    <button onclick="addText">Enviar</button>
+    <button onclick="action()">action</button>
+    <script>
+      // console.log(document.getElementsByTagName('p').innerHTML);
+      // console.log(document.getElementsByTagName('p')[0].innerHTML);
+      // console.log(document.getElementById(1).remove());
+    </script>
+  </body>
+</html>
